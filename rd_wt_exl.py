@@ -1,8 +1,6 @@
 import xlrd
 
 
-
-
 def read_excel(path):
     symbols = []
     fliter = 'OKEx'
@@ -27,6 +25,8 @@ def read_excel(path):
                 continue
             symbols.append(symbol.strip())
     return symbols
+
+
 if __name__=="__main__":
     symbols = read_excel("./货币对03.xlsx")
     print(len(symbols))
